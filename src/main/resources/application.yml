@@ -1,0 +1,3 @@
+ilmateenistus:
+ weather:
+  api: https://www.ilmateenistus.ee/ilma_andmed/xml/forecast.php?
