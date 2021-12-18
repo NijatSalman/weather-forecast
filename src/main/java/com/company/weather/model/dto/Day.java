@@ -1,11 +1,11 @@
 package com.company.weather.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import lombok.Data;
-
 import java.util.List;
+
+
 @Data
 public class Day {
     @JsonProperty("phenomenon")
@@ -20,13 +20,11 @@ public class Day {
     @JsonProperty("text")
     private String text;
 
-    //@JsonProperty("place")
-    @JacksonXmlElementWrapper(localName="place")
-    private List<Place> placeList;
+    @JacksonXmlElementWrapper(localName = "place", useWrapping = false)
+    private List<Place> place;
 
-    //@JsonProperty("wind")
-    @JacksonXmlElementWrapper(localName="wind")
-    private List<Wind> windList;
+    @JacksonXmlElementWrapper(localName = "wind", useWrapping = false)
+    private List<Wind> wind;
 
     @JsonProperty("sea")
     private String sea;

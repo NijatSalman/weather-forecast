@@ -10,16 +10,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping(
+        value = "api",
+        produces = {"application/json"})
 @RequiredArgsConstructor
 public class WeatherController {
 
-        private final WeatherService weatherService;
+    private final WeatherService weatherService;
 
-        @GetMapping("api/forecasts")
-        public ResponseEntity<Forecasts> getForecast(@RequestParam(required = false, name = "lang") String lang){
-                weatherService.getForecastWeather(lang);
-                       return  null;
-        }
+    @GetMapping("/forecasts")
+    public Forecasts getForecast(
+            @RequestParam(required = false, name = "lang") String lang
+    ) {
+        return weatherService.getForecastWeather(lang);
+    }
 
 }

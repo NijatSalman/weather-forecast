@@ -1,38 +1,35 @@
 package com.company.weather.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Data;
-
 import java.util.List;
 
 @Data
 public class Night {
-    @JsonProperty("phenomenon")
-    private String phenomenon;
 
-    @JsonProperty("tempmin")
-    private int tempMin;
+        @JsonProperty("phenomenon")
+        private String phenomenon;
 
-    @JsonProperty("tempmax")
-    private int tempMax;
+        @JsonProperty("tempmin")
+        private int tempMin;
 
-    @JsonProperty("text")
-    private String text;
+        @JsonProperty("tempmax")
+        private int tempMax;
 
-    //@JsonProperty("place")
-    @JacksonXmlElementWrapper(localName="place")
-    private List<Place> placeList;
+        @JsonProperty("text")
+        private String text;
 
-    //@JsonProperty("wind")
-    @JacksonXmlElementWrapper(localName="wind")
-    private List<Wind> windList;
+        @JacksonXmlElementWrapper(localName="place", useWrapping = false)
+        private List<Place> place;
+
+        @JacksonXmlElementWrapper(localName="wind", useWrapping = false)
+        private List<Wind> wind;
 
     @JsonProperty("sea")
     private String sea;
 
     @JsonProperty("peipsi")
     private String peipsi;
+
 }
