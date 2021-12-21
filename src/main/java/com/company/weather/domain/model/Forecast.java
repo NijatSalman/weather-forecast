@@ -1,4 +1,4 @@
-package com.company.weather.model.dto;
+package com.company.weather.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;

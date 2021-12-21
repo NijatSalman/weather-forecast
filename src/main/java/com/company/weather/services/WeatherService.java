@@ -1,6 +1,6 @@
 package com.company.weather.services;
 
-import com.company.weather.model.dto.Forecasts;
+import com.company.weather.domain.model.Forecasts;
 
 public interface WeatherService {
 

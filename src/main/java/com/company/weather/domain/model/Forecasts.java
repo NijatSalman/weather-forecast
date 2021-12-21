@@ -1,4 +1,4 @@
-package com.company.weather.model.dto;
+package com.company.weather.domain.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import lombok.Data;

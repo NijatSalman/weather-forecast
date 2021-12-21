@@ -1,10 +1,8 @@
 package com.company.weather.services.Impl;
 
-import com.company.weather.model.dto.Forecasts;
+import com.company.weather.domain.model.Forecasts;
 import com.company.weather.services.WeatherService;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -23,7 +21,7 @@ public class WeatherServiceImpl implements WeatherService {
 
     @Override
     public Forecasts getForecastWeather(String lang) {
-        Forecasts forecasts = restTemplate.getForObject(xmlWeatherApi, Forecasts.class);
+        Forecasts forecasts = restTemplate.getForObject(xmlWeatherApi+"lang="+lang, Forecasts.class);
         return forecasts;
     }
 }

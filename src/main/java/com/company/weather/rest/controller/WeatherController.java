@@ -1,9 +1,8 @@
-package com.company.weather.controller;
+package com.company.weather.rest.controller;
 
-import com.company.weather.model.dto.Forecasts;
+import com.company.weather.domain.model.Forecasts;
 import com.company.weather.services.WeatherService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
