@@ -3,16 +3,14 @@ package com.company.weather.rest.controller;
 import com.company.weather.domain.model.Forecasts;
 import com.company.weather.services.WeatherService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(
         value = "api",
         produces = {"application/json"})
 @RequiredArgsConstructor
+@CrossOrigin
 public class WeatherController {
 
     private final WeatherService weatherService;
