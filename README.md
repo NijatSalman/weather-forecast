@@ -16,7 +16,7 @@ Project is created with:
 	
 ## Setup
 To run this project, install it locally using git clone:
-
+cd to project directory then run following
 ```
 ./gradlew bootRun
 
